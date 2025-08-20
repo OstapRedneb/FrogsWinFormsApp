@@ -63,6 +63,36 @@ namespace FrogsWinFormsApp.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7ab31714bdbbe438c31b8eb110ca771f {
+            get {
+                object obj = ResourceManager.GetObject("7ab31714bdbbe438c31b8eb110ca771f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _9dec81c3ff0d412ce22829d301b0dcf8 {
+            get {
+                object obj = ResourceManager.GetObject("9dec81c3ff0d412ce22829d301b0dcf8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap f55952455020a6e25a013984aa7a7329 {
+            get {
+                object obj = ResourceManager.GetObject("f55952455020a6e25a013984aa7a7329", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Кувшинка {
             get {
                 object obj = ResourceManager.GetObject("Кувшинка", resourceCulture);
