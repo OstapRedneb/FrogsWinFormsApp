@@ -16,5 +16,18 @@ namespace FrogsWinFormsApp
         {
             InitializeComponent();
         }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBox.Text))
+                MessageBox.Show("Вы не ввели имя!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else 
+            {
+                //GameForm.user.Name = textBox.Text;
+                new GameForm().Show();
+
+                Hide();
+            }
+        }
     }
 }
