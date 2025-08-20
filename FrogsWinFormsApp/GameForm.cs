@@ -14,7 +14,6 @@ namespace FrogsWinFormsApp
     public partial class GameForm : Form
     {
         public static User user;
-        bool isWin = false;
 
         public GameForm()
         {
@@ -30,11 +29,20 @@ namespace FrogsWinFormsApp
             {
                 (pictureBox.Location, centerPictureBox.Location) = (centerPictureBox.Location, pictureBox.Location);
 
-                scoreLabel.Text = (int.Parse(scoreLabel.Text) + 1).ToString();
+                if (pictureBox != centerPictureBox)
+                    scoreLabel.Text = (int.Parse(scoreLabel.Text) + 1).ToString();
 
-                if (isWin) 
+
+                if (CheckWin())
                 {
+                    string congratulations = scoreLabel.Text == "24" ? "Вам удалось пройти игру за минимальное количество ходов" : "К соджалению вам не уалось пройти игу за минимальное количество ходов";
+                    MessageBox.Show($"Поздравляю! вы победили!\n{congratulations}", "Поздравление", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    user.Result = int.Parse(scoreLabel.Text);
+                    FileWorker.AddUser(user);
+
+                    new MenuForm().Show();
+                    Hide();
                 }
             }
             else
@@ -42,12 +50,14 @@ namespace FrogsWinFormsApp
                 MessageBox.Show("Так низя!!1!");
             }
         }
-        private void CheckWin()
+        private bool CheckWin()
         {
-            foreach(PictureBox pictureBox in pictureBoxes) 
+            foreach (PictureBox pictureBox in pictureBoxes)
             {
-                if (pictureBox.Tag == "1") { }
+                if ((pictureBox.Tag == "1" && pictureBox.Location.X < 10 + (pictureBox.Size.Width * 5)) || (pictureBox.Tag == "2" && pictureBox.Location.X >= 10 + (pictureBox.Size.Width * 4)))
+                    return false;
             }
+            return true;
         }
     }
 }
