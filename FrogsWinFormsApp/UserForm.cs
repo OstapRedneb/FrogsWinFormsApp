@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using _2048ClassLibrary;
 
 namespace FrogsWinFormsApp
 {
@@ -23,7 +24,7 @@ namespace FrogsWinFormsApp
                 MessageBox.Show("Вы не ввели имя!", "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else 
             {
-                //GameForm.user.Name = textBox.Text;
+                GameForm.user = new User(textBox.Text);
                 new GameForm().Show();
 
                 Hide();
