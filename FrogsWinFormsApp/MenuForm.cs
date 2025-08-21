@@ -1,3 +1,5 @@
+using _2048ClassLibrary;
+
 namespace FrogsWinFormsApp
 {
     public partial class MenuForm : Form

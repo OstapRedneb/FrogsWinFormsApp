@@ -1,4 +1,6 @@
-﻿namespace FrogsWinFormsApp
+﻿using _2048ClassLibrary;
+
+namespace FrogsWinFormsApp
 {
     partial class ResultsForm
     {

@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\UserFileClassLibrary\2048ClassLibrary.csproj" />
+    <ProjectReference Include="..\2048ClassLibrary\2048ClassLibrary.csproj" />
   </ItemGroup>
 
   <ItemGroup>
